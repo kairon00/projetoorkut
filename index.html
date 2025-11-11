@@ -1,35 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orkut</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Cabeçalho fixo -->
     <header class="header">
         <h1>Orkut</h1>
+        <div class="user-info"></div>
+        <button id="loginBtn" class="btn">Login</button>
     </header>
+
+    <!-- Layout principal -->
     <div class="layout">
+        <!-- Barra lateral -->
         <aside class="sidebar">
+            <div class="perfil">
+                <img src="perfill.jpg" alt="Logo" class="logo">
+                <div id="#border-botton"></div>
+                <p class="sidebar-footer">3 Curtidas</p>
+                <p class="sidebar-footer">2Post</p>
+            </div>
+
             <footer class="sidebar-footer">
-                <p> SENAI - Okut</p>
+                <div class="social">
+                    <img src="instagram.svg" alt="1">
+                </div>
+                <p>© SENAI - Orkut</p>
             </footer>
         </aside>
+
+        <!-- Conteúdo principal -->
         <main class="content">
+            <!-- Post 1 -->
             <div class="card">
-                <h3>post 1</h3>
+                <img src="perfill.jpg" alt="Usuário 1" class="avatar">
+                <div class="info">
+                    <h3>Usuário_01</h3>
+                    <p><strong>Post</strong> Post 01</p>
+                </div>
+                <span class="hora">18:30 - 12/08/2025</span>
+                <div class="acoes">
+                    <img src="Cutir.svg" alt="Curtir" class="curtir">
+                    <img src="comentario.svg" alt="Comentar" class="comentar">
+                </div>
+                <div class="comentario-area">
+                    <textarea placeholder="Escreva um comentário..."></textarea>
+                    <button class="btn-enviar">Enviar</button>
+                    <div class="comment-list"></div>
+                </div>
             </div>
-        </main>
+
+            <!-- Post 2 -->
+            <div class="card">
+                <img src="logo.jpg" alt="Usuário 2" class="avatar">
+                <div class="info">
+                    <h3>Usuário_02</h3>
+                    <p><strong>Post</strong> Post 02</p>
+                </div>
+                <span class="hora">20:40 - 15/08/2025</span>
+                <div class="acoes">
+                    <img src="Cutir.svg" alt="Curtir" class="curtir">
+                    <img src="comentario.svg" alt="Comentar" class="comentar">
+                </div>
+                <div class="comentario-area">
+                    <textarea placeholder="Escreva um comentário..."></textarea>
+                    <button class="btn-enviar">Enviar</button>
+                    <div class="comment-list"></div>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="card">
+                <img src="logo2.jpg" alt="Usuário 3" class="avatar">
+                <div class="info">
+                    <h3>Usuário_03</h3>
+                    <p><strong>Post</strong> Post 03</p>
+                </div>
+                <span class="hora">09:10 - 18/08/2025</span>
+                <div class="acoes">
+                    <img src="Cutir.svg" alt="Curtir" class="curtir">
+                    <img src="comentario.svg" alt="Comentar" class="comentar">
+                </div>
+                <div class="comentario-area">
+                    <textarea placeholder="Escreva um comentário..."></textarea>
+                    <button class="btn-enviar">Enviar</button>
+                    <div class="comment-list"></div>
+                </div>
+            </div>
+
     </div>
+    </main>
+    </div>
+
+    <!-- Modal de Login -->
+    <div class="modal" id="loginModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button id="closeModal" class="btn modal-close" aria-label="Fechar">&times;</button>
+            <h3 id="modalTitle">Entrar</h3>
+            <form id="loginForm">
+                <label class="label">Usuário</label>
+                <input id="username" type="text" placeholder="Digite seu nome">
+
+                <label class="label">Senha</label>
+                <input id="password" type="password" placeholder="Senha">
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rodapé fixo -->
     <footer class="footer">
-        <p>senai - Orkut</p>
+        <p>© SENAI - Orkut</p>
     </footer>
-    <div class="modal" id="loginModal">
-    </div>
-    <scrpt src="script.js"></scrpt>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
